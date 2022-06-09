@@ -17,7 +17,7 @@
     .jumbo {
       height: 80vh;
       padding: 5% 3vh;
-      background-image: url(/worldclock/clock.jpg);
+      background-image: url("/worldclock/clock.jpg");
     }
   </style>
 
@@ -71,8 +71,8 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-  <script>
+    crossorigin="anonymous">
+  
     let a;
     let ft;
     let dt;
@@ -83,11 +83,8 @@
       month: "short",
       day: "numeric"
     };
-    setInterval(() => {
-
-
+    setInterval(() => { 
       a = new Date()
-      tz = a.getTimezoneOffset();
       ft = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds() + ":" + a.getMilliseconds();
       dt = a.toLocaleDateString("en-Us", options);
       document.getElementById("time").innerHTML = ft + "<br>  on  " + dt;
